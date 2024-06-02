@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat window</title>
+    <link rel="stylesheet" href="/static/index.css"> 
+</head>
+
+<body>
+    <div id="jsonData" style="display: none;"></div>
+    
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <span>Robot Customer Service</span>
+            <button id="minimizeButton">—</button> 
+        </div>
+        <div class="messages">
+            <div class="message theirs" id="message1" style="display:none;">Hello, AI customer service is happy to serve you</div>
+            <div class="message theirs" id="message2" style="display:none;">If you want to take a trip, could you tell me your origin and destination? What's the budget? When are you going to leave? How many people are traveling?</div>
+        </div>
+        <div class="input-area">
+            <input id="messageInput" type="text" placeholder="Enter the message...">
+            <button id="runButton">send</button>
+        </div>
+        </div>
+    </div>
+    
+    <div id="restoreButton" >+</div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('message1').style.display = 'block';
+            }, 1000); 
+
+            setTimeout(function() {
+                document.getElementById('message2').style.display = 'block';
+            }, 2500);  
+        }
+    </script>
+    <script src="/static/css.js"></script> 
+    <script src="/static/index.js"></script>
+</body>
+</html>
